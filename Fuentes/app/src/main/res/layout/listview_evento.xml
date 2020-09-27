@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iconoImg"
+        android:layout_width="0dp"
+        android:layout_weight="20"
+        android:padding="10dp"
+        android:layout_height="80dp">
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_weight="80"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/fechaListTxt"
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:gravity="center|left"
+            android:layout_height="0dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/nombreListTxt"
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:gravity="center|left"
+            android:layout_height="0dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/valorListTxt"
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:gravity="center|left"
+            android:layout_height="0dp">
+
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>

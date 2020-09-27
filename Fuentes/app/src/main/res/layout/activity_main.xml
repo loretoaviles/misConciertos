@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Registro del evento">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nombreTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre artista"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/fechaBtn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Fecha de evento">
+
+        </Button>
+
+        <EditText
+            android:id="@+id/fechaTxt"
+            android:layout_width="100dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:editable="false"
+            android:visibility="invisible"
+            tools:ignore="Deprecated">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/generoSp"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/valorTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor de entrada"
+            android:inputType="number"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/calificacionSp"
+            android:layout_height="wrap_content"></Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/registrarBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="registrar"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/eventosLv"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+</LinearLayout>
