@@ -4,97 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/list"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop5"
         android:gravity="center"
-        android:text="Registro del evento">
+        android:text="@string/titulo"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/letraTitulo"
+        android:textStyle="bold">
 
     </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopBase"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/nombreTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre artista"></EditText>
+            android:hint="@string/nombreArtista"></EditText>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="@dimen/layoutFecha"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopBase"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/fechaBtn"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Fecha de evento">
-
-        </Button>
-
-        <EditText
-            android:id="@+id/fechaTxt"
-            android:layout_width="100dp"
-
+            android:layout_width="@dimen/buttonFecha"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:editable="false"
-            android:visibility="invisible"
-            tools:ignore="Deprecated">
+            android:text="@string/fechaEvento"></Button>
 
-        </EditText>
+      <TextView
+          android:textSize="@dimen/letraTextView"
+          android:textColor="@color/primary_text"
+          android:id="@+id/fechaTxt"
+          android:layout_width="@dimen/buttonFecha"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
 
+      </TextView>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopBase"
         android:orientation="vertical">
 
         <Spinner
-            android:layout_width="match_parent"
             android:id="@+id/generoSp"
-            android:layout_height="wrap_content">
-
-        </Spinner>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/valorTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Valor de entrada"
-            android:inputType="number"></EditText>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:id="@+id/calificacionSp"
+            android:layout_width="@dimen/layoutWidth"
             android:layout_height="wrap_content"></Spinner>
 
     </LinearLayout>
@@ -102,22 +75,57 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopBase"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/registrarBtn"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/valorTxt"
+            android:layout_width="@dimen/layoutWidth"
             android:layout_height="wrap_content"
-            android:text="registrar"></Button>
+            android:hint="@string/valorEntrada"
+            android:inputType="number">
+
+        </EditText>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopBase"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/calificacionSp"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="wrap_content"></Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/layoutBtn"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/marginTopBase"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/registrarBtn"
+            android:layout_width="@dimen/layoutBtn"
+            android:layout_height="@dimen/layoutHeight"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/registrar"
+            android:textColor="@color/icons"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop15">
 
         <ListView
-            android:layout_width="match_parent"
             android:id="@+id/eventosLv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         </ListView>

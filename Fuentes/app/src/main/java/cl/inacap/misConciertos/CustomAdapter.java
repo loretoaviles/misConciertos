@@ -38,20 +38,18 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Evento item = (Evento)getItem(i);
+        Evento item = (Evento) getItem(i);
 
-        view = LayoutInflater.from(context).inflate(R.layout.listview_evento,null);
-        ImageView iconoImg = (ImageView)view.findViewById(R.id.iconoImg);
-        TextView fechaListTxt = (TextView)view.findViewById(R.id.fechaListTxt);
-        TextView nombreListTxt = (TextView)view.findViewById(R.id.nombreListTxt);
-        TextView valorListTxt = (TextView)view.findViewById(R.id.valorListTxt);
+        view = LayoutInflater.from(context).inflate(R.layout.listview_evento, null);
+        ImageView iconoImg = (ImageView) view.findViewById(R.id.iconoImg);
+        TextView fechaListTxt = (TextView) view.findViewById(R.id.fechaListTxt);
+        TextView nombreListTxt = (TextView) view.findViewById(R.id.nombreListTxt);
+        TextView valorListTxt = (TextView) view.findViewById(R.id.valorListTxt);
 
         iconoImg.setImageResource(item.getCalificacion());
-        fechaListTxt.setText("Fecha: "+item.getFecha());
-        nombreListTxt.setText("Nombre: "+item.getNombre());
-        valorListTxt.setText("Valor: "+item.getValor());
-
-
+        fechaListTxt.setText("Fecha: " + item.getFecha());
+        nombreListTxt.setText("Nombre del Artista: " + item.getNombre());
+        valorListTxt.setText("Valor de entrada: " + item.getValor());
 
         return view;
     }

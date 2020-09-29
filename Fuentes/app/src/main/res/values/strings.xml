@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mis Conciertos</string>
+    <string name="titulo">Registrar Concierto</string>
+    <string name="nombreArtista">Nombre artista</string>
+    <string name="fechaEvento">Fecha de evento</string>
+    <string name="valorEntrada">Valor de entrada</string>
+    <string name="registrar">registrar</string>
 </resources>

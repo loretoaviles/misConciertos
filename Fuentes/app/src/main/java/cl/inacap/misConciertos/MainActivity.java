@@ -1,7 +1,6 @@
 package cl.inacap.misConciertos;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -14,12 +13,10 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
 import cl.inacap.misConciertos.dao.EventosDAO;
 import cl.inacap.misConciertos.dto.Evento;
 
@@ -27,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText nombreTxt;
     private Button fechaBtn;
     private Button registrarBtn;
-    private TextView fechaTxt;
     private EditText valorTxt;
     private int dia, mes, anio;
     private Spinner generoSp;
+    private TextView fechaTxt;
     private Spinner calificacionSp;
     private ListView eventosLv;
     private CustomAdapter adaptador;
@@ -90,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                             , anio, mes, dia);
                     datePickerDialog.show();
-                    fechaTxt.setVisibility(View.VISIBLE);
+
 
                 }
             }
@@ -119,9 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } catch (Exception ex) {
                     errores.add("El valor debe ser mayor que 0");
-
                 }
-
 
                 if (errores.isEmpty()) {
                     e.setNombre(nombreTxt.getText().toString());
@@ -153,11 +148,10 @@ public class MainActivity extends AppCompatActivity {
             mensaje += "" + e + "\n";
         }
         AlertDialog.Builder aleBuilder = new AlertDialog.Builder(MainActivity.this);
-        aleBuilder.setTitle("Error de validación")//define el titulo
-                .setMessage(mensaje)//define el mensaje del dialogo
-                .setPositiveButton("Aceptar", null)//agrega el boton aceptar
-                .create()//crea el alert
-                .show();//lo muestra
-
+        aleBuilder.setTitle("Error de validación")
+                .setMessage(mensaje)
+                .setPositiveButton("Aceptar", null)
+                .create()
+                .show();
     }
 }
